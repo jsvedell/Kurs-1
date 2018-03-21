@@ -1,0 +1,24 @@
+{
+  "id": "046b6de4-a659-4bdd-87f7-9fe0b0ed6085",
+  "name": "ALProject1",
+  "publisher": "Johan Svedell",
+  "brief": "",
+  "description": "",
+  "version": "1.0.0.0",
+  "compatibilityId": "1.0.0.0",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "",
+  "capabilities": [],
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "11.0.0.0",
+  "application": "11.0.0.0",
+  "target": "internal",
+  "idRange": {
+    "from": 50100,
+    "to": 50149
+  }
+}
