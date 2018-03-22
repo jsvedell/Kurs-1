@@ -6,6 +6,7 @@ page 123456703 "Seminar Comment Sheet"
     SourceTable = "Seminar Comment Line";
     Caption = 'Seminar Comment Sheet';
     UsageCategory = Tasks;
+    AutoSplitKey = true;
 
     layout
     {
@@ -13,17 +14,21 @@ page 123456703 "Seminar Comment Sheet"
         {
             repeater(Group)
             {
-                field(Date;Date)
+                field(Date; Date)
                 {
                 }
-                field(Code;Code)
+                field(Code; Code)
                 {
                     Visible = false;
                 }
-                field(Comment;Comment)
+                field(Comment; Comment)
                 {
                 }
             }
         }
     }
+    trigger OnNewRecord(BelowxRec: Boolean);
+    begin
+        SetupNewLine;
+    end;
 }
