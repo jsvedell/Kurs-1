@@ -8,9 +8,9 @@ table 123456733 "Seminar Register"
 
     fields
     {
-        field(1;"Entry No.";Integer)
+        field(1;"No.";Integer)
         {
-            Caption = 'Entry No.';
+            Caption = 'No.';
         }
         field(2;"From Entry No.";Integer)
         {
@@ -45,11 +45,8 @@ table 123456733 "Seminar Register"
                 UserMgt.LookupUserID("User ID");
             end;
         }
-        field(7;"Journal Template Name";Code[10])
-        {
-            Caption = 'Journal Template Name';
-        }
-        field(8;"Journal Batch Name";Code[10])
+
+        field(7;"Journal Batch Name";Code[10])
         {
             Caption = 'Journal Batch Name';
         }
@@ -57,15 +54,19 @@ table 123456733 "Seminar Register"
 
     keys
     {
-        key(Key1;"Entry No.")
+        key(Key1;"No.")
         {
         }
         key(Key2;"Creation Date")
         {
         }
-        key(Key3;"Source Code","Journal Template Name","Creation Date")
+        key(Key3;"Source Code","Creation Date")
         {
         }
+    }
+
+    fieldgroups
+    {
     }
 }
 

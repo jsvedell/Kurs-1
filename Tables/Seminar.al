@@ -71,7 +71,7 @@ table 123456701 Seminar
             trigger OnValidate();
             begin
                 if(xRec."Gen. Prod. Posting Group" <> "Gen. Prod. Posting Group") then begin
-                    if GenProdPostingGroup.ValidateVatProdPostingGroup(GenProdPostingGroup, "VAT Prod. Posting Group") then
+                    if GenProdPostingGroup.ValidateVatProdPostingGroup(GenProdPostingGroup, "gen. Prod. Posting Group") then
                         validate("VAT Prod. Posting Group", GenProdPostingGroup."Def. VAT Prod. Posting Group");
                 end;
             end;
