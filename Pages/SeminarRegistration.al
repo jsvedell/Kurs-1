@@ -3,6 +3,9 @@ page 123456710 "Seminar Registration"
     // CSD1.00 - 2018-01-01 - D. E. Veloper
     //   Chapter 6 - Lab 3-1
     //     - Created new page
+    //   Chapter 8 - Lab 2 - 4
+    //   Added Action Navigate
+
 
     Caption = 'Seminar Registration';
     PageType = Document;
@@ -114,6 +117,7 @@ page 123456710 "Seminar Registration"
                 Provider = SeminarRegistrationLines;
                 SubPageLink = "No." = field ("Bill-to Customer No.");
             }
+
             systempart("Links"; Links)
             {
             }
@@ -136,7 +140,7 @@ page 123456710 "Seminar Registration"
                     Image = Comment;
                     RunObject = Page 123456703;
                     RunPageLink = "No." = Field ("No.");
-                    RunPageView = where ("Table Name" = const ("Seminar Registration Header"));
+                    RunPageView = where ("Table Name" = const ("Seminar Registration header"));
                 }
                 action("&Charges")
                 {
@@ -145,6 +149,35 @@ page 123456710 "Seminar Registration"
                     RunObject = Page 123456724;
                     RunPageLink = "Document No." = Field ("No.");
                 }
+            }
+        }
+        area(Processing)
+        {
+            action("&Navigate")
+            {
+                Caption = '&Navigate';
+                Image = Navigate;
+                Promoted = true;
+                PromotedCategory = Process;
+
+                trigger OnAction();
+                var
+                    Navigate: page Navigate;
+                begin
+                    Navigate.SetDoc("Posting Date", "No.");
+                    Navigate.RUN;
+                end;
+            }
+
+            action("&Post")
+            {
+                Caption = '&Post';
+                Image = PostDocument;
+                Promoted = true;
+                PromotedIsBig = true;
+                PromotedCategory = Process;
+                ShortcutKey = F9;
+                RunObject = codeunit "Seminar-Post (Yes/No)";
             }
         }
     }

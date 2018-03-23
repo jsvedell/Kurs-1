@@ -76,6 +76,15 @@ page 123456713 "Seminar Registration List"
                     RunObject = Page 123456724;
                     RunPageLink = "Document No."=Field("No.");
                 }
+                action("Post")
+                {
+                    Caption = 'Post';
+                    Image = Post;
+                    RunObject = codeunit "Seminar-Post (Yes/No)";
+                    Promoted = true;
+                    PromotedIsBig = true;
+                    PromotedOnly = true;
+                }                
             }
         }
     }

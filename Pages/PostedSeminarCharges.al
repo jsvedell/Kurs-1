@@ -9,7 +9,7 @@ page 123456739 "Posted Seminar Charges"
     Editable = false;
     PageType = List;
     SourceTable = "Posted Seminar Charge";
-    UsageCategory=Lists;
+    //UsageCategory=Lists;
 
     layout
     {

@@ -79,7 +79,7 @@ codeunit 123456799 InstallSeminar
         Seminar."Minimum Participants":=4;
         Seminar."Seminar Duration":=5;
         Seminar."Seminar Price":=1000;
-        Seminar.insert;
+        if Seminar.insert then;
     end;
     local procedure CreateResources();
     var
